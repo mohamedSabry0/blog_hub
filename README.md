@@ -2,14 +2,14 @@
 
 <div align="center">
 
-  <h3><b>Blog App</b></h3>
+  <h3><b>Blog Hub</b></h3>
 
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 Blog Hub ](#-blog-hub-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -19,7 +19,6 @@
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -29,9 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Blog Hub <a name="about-project"></a>
 
-Blog app was built with Ruby on Rails. It is a simple blog app that allows users to create posts and comment on them. It also allows users to like posts. It has a simple UI that allows users to navigate through the app easily. The users have profiles that they can edit and add a profile picture to along with their name and bio.
+Blog app that is built with Ruby on Rails. It is a simple blog app that allows users to create posts and comment on them. It also allows users to like posts. It has a simple UI that allows users to navigate through the app easily. The users have profiles that they can edit and add a profile picture to along with their name and bio.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -74,7 +73,7 @@ Blog app was built with Ruby on Rails. It is a simple blog app that allows users
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/mohamedSabry0/blog-app.git
+git clone https://github.com/mohamedSabry0/blog_hub.git
 ```
 
 ### Prerequisites
@@ -89,9 +88,9 @@ In order to run this project you need:
 Clone this repository to your dist folder:
 
 ```
-git clone https://github.com/mohamedSabry0/blog-app.git
+git clone https://github.com/mohamedSabry0/blog_hub.git
 
-cd blog-app
+cd blog_hub
 ```
 
 ### Install
@@ -108,10 +107,6 @@ Use this project in the browsers of desktops and mobile devices
 ### Run tests
 
 rails test
-
-### Deployment
-
-N/A
 
 ## 👥 Author <a name="authors"></a>
 
@@ -148,7 +143,7 @@ N/A
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](https://github.com/mohamedSabry0/blog_hub/issues).
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -162,6 +157,6 @@ Acknowledgements and suggestions for improvement are always welcome
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/mohamedSabry0/blog-app/blob/data-model/LICENSE) licensed.
+This project is [MIT](https://github.com/mohamedSabry0/blog_hub/blob/create-model/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
