@@ -54,4 +54,4 @@ jobs:
           bundler exec rails db:create RAILS_ENV=test
           bundler exec rails db:migrate RAILS_ENV=test
       - name: Run tests
-        run: bundle exec rspec --format doc
+        run: bundle exec rails test
