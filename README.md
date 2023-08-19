@@ -19,7 +19,6 @@
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -108,10 +107,6 @@ Use this project in the browsers of desktops and mobile devices
 ### Run tests
 
 rails test
-
-### Deployment
-
-N/A
 
 ## 👥 Author <a name="authors"></a>
 
