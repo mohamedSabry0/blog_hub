@@ -6,16 +6,11 @@ class Post < ApplicationRecord
   after_destroy :update_posts_counter_on_destroy
 
   def update_posts_counter_on_create
-    update_posts_counter(1)
+    author.increment!(:posts_counter)
   end
 
   def update_posts_counter_on_destroy
-    update_posts_counter(-1)
-  end
-
-  def update_posts_counter(value)
-    author.posts_counter += value
-    author.save
+    author.decrement!(:posts_counter)
   end
 
   def five_most_recent_comments

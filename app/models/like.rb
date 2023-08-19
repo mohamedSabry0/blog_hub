@@ -6,15 +6,10 @@ class Like < ApplicationRecord
   after_destroy :update_likes_counter_on_destroy
 
   def update_likes_counter_on_create
-    update_likes_counter(1)
+    post.increment!(:likes_counter)
   end
 
   def update_likes_counter_on_destroy
-    update_likes_counter(-1)
-  end
-
-  def update_likes_counter(value)
-    post.likes_counter += value
-    post.save
+    post.decrement!(:likes_counter)
   end
 end
