@@ -1,8 +1,8 @@
 env:
   RUBY_VERSION: 3.2.2
-  POSTGRES_USER: postgres
-  POSTGRES_PASSWORD: postgres
-  POSTGRES_DB: postgres
+  POSTGRES_USER: blog_hub
+  POSTGRES_PASSWORD: ""
+  POSTGRES_DB: blog_hub_test
 
 name: Rails tests
 on: [push]
