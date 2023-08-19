@@ -2,7 +2,7 @@ env:
   RUBY_VERSION: 3.2.2
 
 name: Rails tests
-on: [push]
+on: [pull_request]
 jobs:
   rspec-test:
     name: RSpec
@@ -12,7 +12,7 @@ jobs:
         image: postgres:10.8
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: ''
           POSTGRES_DB: postgres
         ports:
           - 5432:5432
@@ -30,7 +30,7 @@ jobs:
       PGHOST: localhost
       PGUSER: postgres
       # Rails verifies the time zone in DB is the same as the time zone of the Rails app
-      TZ: "Europe/Warsaw"
+      TZ: 'Europe/Warsaw'
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
@@ -54,4 +54,4 @@ jobs:
           bundler exec rails db:create RAILS_ENV=test
           bundler exec rails db:migrate RAILS_ENV=test
       - name: Run tests
-        run: bundle exec rails test
+        run: bundle exec rspec spec --format doc
