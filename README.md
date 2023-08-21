@@ -106,7 +106,11 @@ Use this project in the browsers of desktops and mobile devices
 
 ### Run tests
 
-rails test
+Run tests with this command in the terminal:
+
+```
+rspec --format documentation
+```
 
 ## 👥 Author <a name="authors"></a>
 
