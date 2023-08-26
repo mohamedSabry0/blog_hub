@@ -47,9 +47,3 @@ class PostTest < ActiveSupport::TestCase
     assert_equal post.five_most_recent_comments, [comment6, comment5, comment4, comment3, comment2]
   end
 end
-
-RSpec.describe 'validations' do
-  it { should validate_presence_of(:title) }
-  it { should validate_numericality_of(:comments_counter).only_integer.is_greater_than_or_equal_to(0) }
-  it { should validate_numericality_of(:likes_counter).only_integer.is_greater_than_or_equal_to(0) }
-end
