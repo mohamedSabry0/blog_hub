@@ -1,5 +1,30 @@
 <html>
   <body>
-    <p>here is the user profile</p>
+    <section>
+      <%= image_tag @user.photo, size: '40x40' %>
+      <p><%= @user.name %></p>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+
+      <div>
+        <h3>Bio</h3>
+        <p><%= @user.bio %></p>
+      </div>
+
+      <div>
+        <h3>Posts</h3>
+        <ul>
+          <% @user.three_most_recent_posts.each do |post| %>
+            <li>
+              <a href="<%= user_post_path(@user, post) %>">
+                <h4><%= post.title %></h4>
+                <p><%= post.text %></p>
+                Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <%= link_to 'See all posts', user_posts_path(@user) %>
+    </section>
   </body>
 </html>
