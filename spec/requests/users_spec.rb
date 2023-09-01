@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'renders the correct content' do
       get users_path
-      expect(response.body).to include('here is a list of users')
+      expect(response.body).to include('Users')
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :request do
     it 'renders the correct content' do
       user = User.create(name: 'John')
       get user_path(user)
-      expect(response.body).to include('here is the user profile')
+      expect(response.body).to include('John')
     end
   end
 end
