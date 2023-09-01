@@ -8,7 +8,9 @@
 
       <li>
         <a href="<%= user_path(user) %>">
-          <%= image_tag user.photo, size: "40x40" %>
+          <% if user.photo %>
+            <%= image_tag user.photo, size: "40x40" %>
+          <% end %>
           <p><%= user.name %></p>
           <p>Number of posts: <%= user.posts_counter %></p>
         </a>
