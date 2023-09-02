@@ -1,0 +1,52 @@
+/* styling for the users index page */
+.users-list {
+  list-style: none;
+  padding: 0;
+}
+
+.users-list li {
+  margin-bottom: 10px;
+}
+
+.user-profile-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.user-card {
+  display: flex;
+  width: 100%;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  border: 1px solid #000;
+}
+
+.user-info {
+  border: 1px solid #000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 300px;
+}
+
+.user-profile-link:hover {
+  text-decoration: underline;
+}
+
+.user-handle {
+  font-size: 150%;
+}
+
+.user-info .post-counter {
+  align-self: flex-end;
+}
+
+.user-show {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}

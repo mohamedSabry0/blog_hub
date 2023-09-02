@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   before(:each) do
     @user = User.create(name: 'John')
+    @post = Post.create(title: 'Hello', author: @user)
   end
 
   describe 'GET users/:id/posts' do
@@ -18,14 +19,11 @@ RSpec.describe 'Posts', type: :request do
 
     it 'renders the correct content' do
       get user_posts_path(@user)
-      expect(response.body).to include('here is a list of posts')
+      expect(response.body).to include('Hello')
     end
   end
 
   describe 'GET users/:id/posts/:id' do
-    before(:each) do
-      @post = Post.create(title: 'Hello', author: @user)
-    end
     it 'response status is correct' do
       get user_post_path(@user, @post)
       expect(response).to have_http_status(200)
@@ -38,7 +36,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'renders the correct content' do
       get user_post_path(@user, @post)
-      expect(response.body).to include('here is the post')
+      expect(response.body).to include('Hello')
     end
   end
 end

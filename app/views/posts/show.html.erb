@@ -1,5 +1,22 @@
 <html>
   <body>
-    <p>here is the post</p>
+    <section class="post-card">
+      <div class="post-info">
+        <h4><%= @post.title %></h4>
+        <p><%= @post.text %></p>
+        Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %>
+      </div>
+      <% unless @post.comments.empty? %>
+        <div class="recent-comments">
+          <ul>
+            <% @post.comments.each do |comment| %>
+              <li>
+                <p><%= comment.author.name %>: <%= comment.text %></p>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </section>
   </body>
 </html>

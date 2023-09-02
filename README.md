@@ -157,6 +157,8 @@ If you like this project, please let me know and we can improve it further. You 
 
 Acknowledgements and suggestions for improvement are always welcome
 
+- https://stackoverflow.com/questions/53510040/carrierwave-argument-error-nil-location-provided-cant-build-uri-for-an-image
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
