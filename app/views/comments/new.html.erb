@@ -1,0 +1,5 @@
+<%= form_with class:"form", model: @comment, url: user_post_comments_path do |form| %>
+  <%= form.label :comment_body %>
+  <%= form.text_area :text %>
+  <%= form.submit %>
+<% end %>
