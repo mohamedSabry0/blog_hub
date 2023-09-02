@@ -5,38 +5,36 @@
   </head>
   <body>
     <section>
-      <% if @user.photo %>
-        <%= image_tag @user.photo, size: "40x40" %>
-      <% end %>
-      <p><%= @user.name %></p>
-      <p>Number of posts: <%= @user.posts_counter %></p>
+      <%= render @user %>
 
       <div>
-        <h3>Posts</h3>
-        <ul>
+        <ul class="post-list">
           <% @user.posts.each do |post| %>
-            <li>
+            <li class="post-card">
               <a href="<%= user_post_path(@user, post) %>">
-                <h4><%= post.title %></h4>
-                <p><%= post.text %></p>
-                Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %>
-                <div>
-                  <ul>
-                    <% post.five_most_recent_comments.each do |comment| %>
-                      <li>
-
-                        <p><%= comment.author.name %>: <%= comment.text %></p>
-                      </li>
-                    <% end %>
-                  </ul>
+                <div class="post-info">
+                  <h4><%= post.title %></h4>
+                  <p><%= truncate post.text %></p>
+                  Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %>
                 </div>
+                <% unless post.comments.empty? %>
+                  <div class="recent-comments">
+                    <ul>
+                      <% post.five_most_recent_comments.each do |comment| %>
+                        <li>
+
+                          <p><%= comment.author.name %>: <%= comment.text %></p>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <% end %>
               </a>
 
             </li>
           <% end %>
         </ul>
       </div>
-      <%= link_to 'See all posts', user_posts_path(@user) %>
     </section>
   </body>
 </html>

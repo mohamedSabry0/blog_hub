@@ -15,7 +15,7 @@
 
 .user-card {
   display: flex;
-  width: 400px;
+  width: 100%;
 }
 
 .user-img {
@@ -43,4 +43,10 @@
 
 .user-info .post-counter {
   align-self: flex-end;
+}
+
+.user-show {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }

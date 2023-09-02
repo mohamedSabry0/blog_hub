@@ -1,0 +1,64 @@
+.posts-index {
+  margin-top: 20px;
+  display: flex;
+}
+
+.post-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.post-info {
+  border: 1px solid #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  overflow-wrap: break-word;
+  padding: 10px;
+}
+
+.recent-comments {
+  margin-top: 5px;
+  border: 1px solid #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+.recent-comments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.post-card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.post-card a:hover {
+  text-decoration: underline;
+}
+
+.post-card .post-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.see-all-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  align-self: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.see-all-btn:hover {
+  text-decoration: underline;
+}

@@ -1,10 +1,13 @@
 <html>
   <body>
-    <section>
-      <h4><%= @post.title %></h4>
+    <section class="post-card">
+      <div class="post-info">
+        <h4><%= @post.title %></h4>
         <p><%= @post.text %></p>
         Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %>
-        <div>
+      </div>
+      <% unless @post.comments.empty? %>
+        <div class="recent-comments">
           <ul>
             <% @post.comments.each do |comment| %>
               <li>
@@ -13,6 +16,7 @@
             <% end %>
           </ul>
         </div>
+      <% end %>
     </section>
   </body>
 </html>
