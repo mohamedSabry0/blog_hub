@@ -1,0 +1,13 @@
+<a class="user-profile-link" href="<%= user_path(user) %>">
+  <div class="user-card">
+    <% if user.photo %>
+    <div class="user-img">
+      <%= image_tag user.photo, size: "40x40" %>
+    </div>
+    <% end %>
+    <div class="user-info">
+      <p class="user-handle"><%= user.name %></p>
+      <p class="post-counter">Number of posts: <%= user.posts_counter %></p>
+    </div>
+  </div>
+</a>

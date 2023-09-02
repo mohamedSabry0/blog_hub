@@ -1,11 +1,7 @@
 <html>
   <body>
     <section>
-      <% if @user.photo %>
-        <%= image_tag @user.photo, size: "40x40" %>
-      <% end %>
-      <p><%= @user.name %></p>
-      <p>Number of posts: <%= @user.posts_counter %></p>
+      <%= render @user %>
 
       <div>
         <h3>Bio</h3>
@@ -19,7 +15,7 @@
             <li>
               <a href="<%= user_post_path(@user, post) %>">
                 <h4><%= post.title %></h4>
-                <p><%= post.text %></p>
+                <p><%= truncate post.text %></p>
                 Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %>
               </a>
             </li>
