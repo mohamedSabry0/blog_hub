@@ -5,6 +5,8 @@
         <h4><%= @post.title %></h4>
         <p><%= @post.text %></p>
         Comments:<%= @post.comments_counter %>, Likes:<%= @post.likes_counter %>
+        <%= button_to 'Like!', user_post_likes_path(@user, @post), method: :post %>
+        <%= link_to 'New comment', new_user_post_comment_path(@user, @post) %>
       </div>
       <% unless @post.comments.empty? %>
         <div class="recent-comments">
