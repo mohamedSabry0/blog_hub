@@ -1,4 +1,3 @@
-<%# posts index %>
 <html>
   <head>
     <title>Posts</title>
@@ -9,7 +8,7 @@
 
       <div class="posts-index">
         <ul class="post-list">
-          <% @user.posts.each do |post| %>
+          <% @posts.each do |post| %>
             <li class="post-card">
               <a href="<%= user_post_path(@user, post) %>">
                 <div class="post-info">
@@ -22,7 +21,6 @@
                     <ul>
                       <% post.five_most_recent_comments.each do |comment| %>
                         <li>
-
                           <p><%= comment.author.name %>: <%= comment.text %></p>
                         </li>
                       <% end %>
@@ -34,6 +32,10 @@
           <% end %>
         </ul>
         <%= link_to 'New Post', new_user_post_path, class:"btn"  %>
+
+        <div class="pagination">
+
+        </div>
       </div>
     </section>
   </body>
