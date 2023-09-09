@@ -53,7 +53,7 @@ RSpec.describe 'PostIndex', type: :feature do
   describe 'post links' do
     it 'When I click on a post, it redirects me to that post\'s show page' do
       click_link @post.title
-      expect(current_path).to eq(user_post_path(@user, @post))
+      expect(page).to have_current_path(user_post_path(@user, @post))
     end
   end
 end

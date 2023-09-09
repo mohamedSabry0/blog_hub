@@ -33,7 +33,7 @@ RSpec.describe 'UserIndex', type: :feature do
   describe 'user links' do
     it 'When I click on a user, I am redirected to that user\'s show page' do
       click_link(@user.name)
-      expect(current_path).to eq(user_path(@user))
+      expect(page).to have_current_path(user_path(@user))
     end
   end
 end
