@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <%# if logged in show log out btn %>
+    <% if user_signed_in? %>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn" %>
+      <br />
+      <%= link_to "Edit user", edit_user_registration_path, class:"btn" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
